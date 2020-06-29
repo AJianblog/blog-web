@@ -26,7 +26,7 @@ public class TCaptchaVerify {
 
     private static final String APP_ID = "2024414229";
     private static final String APP_SECRET = "00LgTYcjRH7uXq0LYD1fRqA**";
-    private static final String VERIFY_URI = "https://ssl.captcha.qq.com/ticket/verify?aid=%s&AppSecretKey=%s&Ticket=%s&Randstr=%s&UserIP=%s";
+    private static final String VERIFY_URI = "https://restapi.amap.com/v3/config/district?key=%s&keywords=%s&subdistrict=%s&extensions=%s";
 
     public static int verifyTicket(String ticket, String rand, String userIp) {
         CloseableHttpClient httpclient = HttpClients.createDefault();
