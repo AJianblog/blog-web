@@ -111,7 +111,7 @@ export class ArticleComponent implements OnInit {
     }
     const dialogRef = this.dialog.open(ArticleInfoDialogComponent, {
       autoFocus: false,
-      width: '520px',
+      width: '820px',
       data: dialogInputData
     });
     dialogRef.afterClosed().subscribe(result => {
