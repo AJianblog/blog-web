@@ -63,7 +63,7 @@ export class HeaderComponent implements OnInit {
     if (this.route.snapshot.queryParamMap.get('type')) {
       queryParams.type = this.route.snapshot.queryParamMap.get('type');
     }
-    this.router.navigate(['/blog', this.nickName, 'article', this.userInfo.userId], {
+    this.router.navigate(['/blog', this.nickName], {
       queryParams: queryParams,
       relativeTo: this.route
     })

@@ -1,4 +1,4 @@
-<mat-toolbar class="mat-elevation-z3">
+<mat-toolbar class="mat-elevation-z3" color="primary">
   <div class="header-left">
     <div class="title">
       <button *ngIf="showMenu" mat-icon-button class="menu" (click)="menuPress.emit()">
@@ -11,14 +11,14 @@
     </form>
   </div>
 
-<!--  <ul class="nav-bar" *ngIf="!isLogin">-->
-<!--    <li class="nav-item">-->
-<!--      <a class="nav-link" routerLink="/user/login">登录</a>-->
-<!--    </li>-->
-<!--    <li class="nav-item">-->
-<!--      <a class="nav-link" routerLink="/user/register">注册</a>-->
-<!--    </li>-->
-<!--  </ul>-->
+  <ul class="nav-bar" *ngIf="!isLogin">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/user/login">登录</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/user/register">注册</a>
+    </li>
+  </ul>
   <div *ngIf="isLogin">
     <div class="avatar-box" [matMenuTriggerFor]="menu">
       <img src="assets/img/avatar.jpg" alt="头像">
@@ -29,4 +29,3 @@
     </mat-menu>
   </div>
 </mat-toolbar>
-<!--<div class="toolbar"></div>-->
