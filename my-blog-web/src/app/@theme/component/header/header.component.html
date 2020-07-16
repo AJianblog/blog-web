@@ -2,7 +2,7 @@
   <div class="header-left">
     <div class="title">
       <button *ngIf="showMenu" mat-icon-button class="menu" (click)="menuPress.emit()">
-        <mat-icon>menu</mat-icon>
+        <mat-icon svgIcon="menu"></mat-icon>
       </button>
       <a *ngIf="userInfo" [routerLink]="['/blog', nickName]">Angel</a>
     </div>
