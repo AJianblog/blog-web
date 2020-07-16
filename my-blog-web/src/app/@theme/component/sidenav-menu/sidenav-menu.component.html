@@ -2,7 +2,7 @@
   <mat-expansion-panel *ngFor="let sidenav of sidenavMenu">
     <mat-expansion-panel-header>
       <mat-panel-title>
-        <mat-icon>{{sidenav.icon}}</mat-icon>
+        <mat-icon [svgIcon]="sidenav.icon"></mat-icon>
         <span class="title-text">{{sidenav.title}}</span>
       </mat-panel-title>
     </mat-expansion-panel-header>
