@@ -1,0 +1,17 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('pull code') {
+            steps {
+                checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://gitee.com/hzjanger/my-blog.git']]])
+            }
+        }
+
+        stage('package project') {
+            steps {
+                sh 'npm -v'
+            }
+        }
+    }
+}
