@@ -1,7 +1,6 @@
 package com.hzj.myblog.controller;
 
 import com.google.gson.Gson;
-import com.hzj.myblog.entity.ErrorResponse;
 import com.hzj.myblog.entity.ReturnResponse;
 import com.hzj.myblog.model.User;
 import com.hzj.myblog.entity.request.Login;
@@ -10,15 +9,10 @@ import com.hzj.myblog.utils.Constant;
 import com.hzj.myblog.utils.CusAccessObjectUtil;
 import com.hzj.myblog.utils.JwtUtil;
 import com.hzj.myblog.utils.TCaptchaVerify;
-import com.sun.org.apache.bcel.internal.generic.ReturnaddressType;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.validation.BindingResult;
-import org.springframework.validation.ObjectError;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
