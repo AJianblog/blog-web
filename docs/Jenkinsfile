@@ -10,7 +10,7 @@ pipeline {
 
         stage('package project') {
             steps {
-                nodejs('node15.4.0') {
+                nodejs('node14.15.1') {
                     // some block
                     sh 'npm -v'
                 }
