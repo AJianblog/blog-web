@@ -1,12 +1,14 @@
 pipeline {
-    agent {
-        docker {
-            image 'node:6-alpine'
-            args '-p 3000:3000'
-        }
-    }
+    agent any
+
     stages {
-        stage('Build') {
+        stage('pull code') {
+            steps {
+                checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://gitee.com/hzjanger/my-blog.git']]])
+            }
+        }
+
+        stage('package project') {
             steps {
                 sh 'npm -v'
             }
