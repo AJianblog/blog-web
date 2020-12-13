@@ -14,7 +14,6 @@ pipeline {
                     // some block
                     sh '''
                         mvn -v
-                        npm -v
                     '''
                 }
             }
