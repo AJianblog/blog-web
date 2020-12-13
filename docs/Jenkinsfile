@@ -10,13 +10,10 @@ pipeline {
 
         stage('package project') {
             steps {
-                sh 'mvn -v'
-                nodejs('node14.15.1') {
-                    // some block
-                    sh '''
-                        npm -v
-                    '''
-                }
+                sh '''
+                    mvn -v
+                    npm -v
+                '''
             }
         }
     }
