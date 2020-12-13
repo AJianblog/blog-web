@@ -12,8 +12,13 @@ pipeline {
             steps {
                 sh '''
                     mvn -v
-                    npm -v
                 '''
+                nodejs('node14.15.1') {
+                    // some block
+                    sh '''
+                        npm -v
+                    '''
+                }
             }
         }
     }
