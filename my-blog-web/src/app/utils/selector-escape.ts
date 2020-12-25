@@ -1,6 +1,5 @@
 export class SelectorEscape {
   /**
-   * jQuery选择器转义
    * ` !"#$%&'()*+,./:;<=>?@[\]^`{|}~`
    * @param str 转义的字符串
    */

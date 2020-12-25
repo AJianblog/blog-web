@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {EditorConfig} from "../../../config/EditorConfig";
 import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 import {MatDialog} from "@angular/material/dialog";
 import {
@@ -23,11 +22,6 @@ import {Constant} from "../../../entity/constant";
 export class ArticleComponent implements OnInit {
 
   /**
-   * editor的配置参数信息
-   */
-  config: EditorConfig;
-
-  /**
    * 博客id,有博客的id,那么为更新,没有博客的id为新增
    */
   blogId: number;
@@ -41,7 +35,6 @@ export class ArticleComponent implements OnInit {
 
   constructor(private fb: FormBuilder, private dialog: MatDialog, private blogService: BlogService,
               private snackBarService: SnackBarService, private router: Router, private route: ActivatedRoute) {
-    this.config = new EditorConfig({height: '500px'});
     this.markdown = '';
   }
 
