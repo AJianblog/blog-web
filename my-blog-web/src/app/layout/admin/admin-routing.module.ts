@@ -19,6 +19,10 @@ const routes: Routes = [
       {
         path: 'label',
         loadChildren: () => import('./blog-label/blog-label.module').then(mod => mod.BlogLabelModule)
+      },
+      {
+        path: 'book',
+        loadChildren: () => import('./book/book.module').then(mod => mod.BookModule)
       }
     ]
   }

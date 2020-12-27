@@ -3,10 +3,6 @@
   min-height: 100vh;
 }
 
-//mat-drawer {
-//  border-right: none;
-//}
-
 .mat-drawer-container {
   background-color: #fff;
 }
@@ -16,3 +12,8 @@
   display: flex;
 }
 
+:host ::ng-deep {
+  .mat-drawer-container {
+    z-index: 4;
+  }
+}

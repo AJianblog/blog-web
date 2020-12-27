@@ -22,6 +22,9 @@ export class HeaderComponent implements OnInit {
   @Input()
   showMenu: boolean = true;
 
+  @Input()
+  menus: { router: string; title: string }[] = []
+
   /**
    * 菜单按钮点击事件
    */

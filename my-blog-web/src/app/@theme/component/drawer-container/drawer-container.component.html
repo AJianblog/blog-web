@@ -1,5 +1,5 @@
 <mat-drawer-container class="responsive-container" autosize>
-  <mat-drawer #drawer class="sidenav" mode="over">
+  <mat-drawer #drawer class="sidenav" [mode]="model">
     <ng-content select="drawer"></ng-content>
   </mat-drawer>
   <mat-drawer-content>

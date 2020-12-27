@@ -15,6 +15,21 @@ export class AdminComponent implements OnInit {
 
   sidenavMenus: SidenavMenu[];
 
+  menus: { title: string; router: string}[] = [
+    {
+      title: '书籍管理',
+      router: '/admin/book'
+    },
+    {
+      title: '博客管理',
+      router: ''
+    },
+    {
+      title: '标签管理',
+      router: ''
+    }
+  ]
+
   constructor(private sidenavService: SidenavService) {
   }
 

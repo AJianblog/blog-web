@@ -1,17 +1,20 @@
 <mat-toolbar class="mat-elevation-z3" color="primary">
   <div class="header-left">
-    <div class="title">
+    <div class="title" *ngIf="userInfo">
       <button *ngIf="showMenu" mat-icon-button class="menu" (click)="menuPress.emit()">
         <mat-icon svgIcon="menu"></mat-icon>
       </button>
-      <a *ngIf="userInfo" [routerLink]="['/blog', nickName]">Angel</a>
+      <a [routerLink]="['/blog', nickName]">Angel</a>
+    </div>
+    <div *ngIf="menus && menus.length > 0">
+      <a *ngFor="let menu of menus" class="menu-item" [routerLink]="menu.router">{{ menu.title }}</a>
     </div>
     <form [formGroup]="formGroup" (ngSubmit)="search()">
       <input class="search-input" placeholder="输入搜索内容" formControlName="search">
     </form>
   </div>
 
-  <ul class="nav-bar" *ngIf="!isLogin">
+  <ul class="nav-bar">
     <li class="nav-item">
       <a class="nav-link" routerLink="/user/login">登录</a>
     </li>
