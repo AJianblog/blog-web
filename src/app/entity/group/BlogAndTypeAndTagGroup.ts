@@ -1,6 +1,6 @@
-import {Blog} from "../../model/blog";
-import {BlogType} from "../../model/blog-type";
-import {Tag} from "../../model/tag";
+import {Blog} from '../../model/blog';
+import {BlogType} from '../../model/blog-type';
+import {Tag} from '../../model/tag';
 
 export class BlogAndTypeAndTagGroup {
 

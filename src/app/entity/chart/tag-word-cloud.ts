@@ -1,4 +1,4 @@
-import {ECharts} from "../../model/e-charts";
+import {ECharts} from '../../model/e-charts';
 
 /**
  * 标签词云实体

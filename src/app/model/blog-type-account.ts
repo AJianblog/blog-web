@@ -1,4 +1,4 @@
-import {BlogType} from "./blog-type";
+import {BlogType} from './blog-type';
 
 /**
  * 用户博客分类数量统计实体

@@ -1,6 +1,6 @@
-import {Observable} from "rxjs";
-import {ReturnModel} from "../../entity/return-model";
-import {BlogTypeAccount} from "../../model/blog-type-account";
+import {Observable} from 'rxjs';
+import {ReturnModel} from '../../entity/return-model';
+import {BlogTypeAccount} from '../../model/blog-type-account';
 
 export abstract class BlogTypeAccountService {
 

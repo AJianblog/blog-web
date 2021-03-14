@@ -1,9 +1,9 @@
-import {Tag} from "../../model/tag";
-import {Observable} from "rxjs";
-import {ReturnModel} from "../../entity/return-model";
-import {TagBlogTypeGroup} from "../../entity/group/TagBlogTypeGroup";
-import {PageResult} from "../../entity/page-result";
-import {TagWordCloud} from "../../entity/chart/tag-word-cloud";
+import {Tag} from '../../model/tag';
+import {Observable} from 'rxjs';
+import {ReturnModel} from '../../entity/return-model';
+import {TagBlogTypeGroup} from '../../entity/group/TagBlogTypeGroup';
+import {PageResult} from '../../entity/page-result';
+import {TagWordCloud} from '../../entity/chart/tag-word-cloud';
 
 export abstract class TagService {
   /**

@@ -1,8 +1,8 @@
-import {Blog} from "../../model/blog";
-import {Observable} from "rxjs";
-import {PageResult} from "../../entity/page-result";
-import {ReturnModel} from "../../entity/return-model";
-import {BlogAndTypeAndTagGroup} from "../../entity/group/BlogAndTypeAndTagGroup";
+import {Blog} from '../../model/blog';
+import {Observable} from 'rxjs';
+import {PageResult} from '../../entity/page-result';
+import {ReturnModel} from '../../entity/return-model';
+import {BlogAndTypeAndTagGroup} from '../../entity/group/BlogAndTypeAndTagGroup';
 
 export abstract class BlogService {
   /**
