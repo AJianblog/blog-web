@@ -1,16 +1,16 @@
 import {Component, Inject, OnInit} from '@angular/core';
-import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
-import {FormBuilder, FormGroup} from "@angular/forms";
-import {BlogTypeService} from "../../../../@core/interface/blog-type.service";
-import {BlogType} from "../../../../model/blog-type";
-import {TagService} from "../../../../@core/interface/tag-service";
-import {MatSelectChange} from "@angular/material/select/typings/select";
-import {Tag} from "../../../../model/tag";
+import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
+import {FormBuilder, FormGroup} from '@angular/forms';
+import {BlogTypeService} from '../../../../@core/interface/blog-type.service';
+import {BlogType} from '../../../../model/blog-type';
+import {TagService} from '../../../../@core/interface/tag-service';
+import {Tag} from '../../../../model/tag';
 import {
   DialogLayoutInputModule
-} from "../../../../@theme/component/dialog-layout/dialog.layout.component";
-import {Blog} from "../../../../model/blog";
-import {CodeEnum} from "../../../../entity/code-enum";
+} from '../../../../@theme/component/dialog-layout/dialog.layout.component';
+import {Blog} from '../../../../model/blog';
+import {CodeEnum} from '../../../../entity/code-enum';
+import { MatSelectChange } from '@angular/material/select';
 
 export class ArticleInfoDialogInputData extends DialogLayoutInputModule {
   /**
@@ -74,7 +74,7 @@ export class ArticleInfoDialogComponent implements OnInit {
       if (data && data.code === 1) {
         this.blogType = data.data;
       }
-    })
+    });
   }
 
   /**
@@ -87,14 +87,14 @@ export class ArticleInfoDialogComponent implements OnInit {
 
   /**
    * 通过博客分类id查找标签信息
-   * @param tagId
+   * @param tagId 博客标签id
    */
   findTagByBlogTypeId(tagId: number) {
     this.tagService.findTagByBlogTypeId(tagId).subscribe(data => {
       if (data.code === CodeEnum.SUCCESS) {
         this.tagList = data.data;
       }
-    })
+    });
   }
 
   /**
