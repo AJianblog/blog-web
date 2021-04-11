@@ -8,7 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "lib": "npm i @hzjanger/z-markdown@latest"
+    "lib": "npm i @hzjanger/z-markdown@latest",
+    "install:z-table": "npm install ./libs/z-table-0.0.1.tgz"
   },
   "private": true,
   "dependencies": {
