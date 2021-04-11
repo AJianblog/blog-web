@@ -405,7 +405,7 @@
 
 "@types/echarts@^4.4.3":
   version "4.9.7"
-  resolved "https://registry.npm.taobao.org/@types/echarts/download/@types/echarts-4.9.7.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fecharts%2Fdownload%2F%40types%2Fecharts-4.9.7.tgz#4437fb503111f5b1ed7961e7b95c7ed09a4844a3"
+  resolved "https://registry.npm.taobao.org/@types/echarts/download/@types/echarts-4.9.7.tgz#4437fb503111f5b1ed7961e7b95c7ed09a4844a3"
   integrity sha1-RDf7UDER9bHteWHnuVx+0JpIRKM=
   dependencies:
     "@types/zrender" "*"
@@ -420,17 +420,17 @@
 
 "@types/jasmine@*":
   version "3.6.9"
-  resolved "https://registry.npm.taobao.org/@types/jasmine/download/@types/jasmine-3.6.9.tgz?cache=0&sync_timestamp=1616804635082&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fjasmine%2Fdownload%2F%40types%2Fjasmine-3.6.9.tgz#8785870f87839b7d91b45d7b226380f28dee5d9f"
+  resolved "https://registry.npm.taobao.org/@types/jasmine/download/@types/jasmine-3.6.9.tgz#8785870f87839b7d91b45d7b226380f28dee5d9f"
   integrity sha1-h4WHD4eDm32RtF17ImOA8o3uXZ8=
 
 "@types/jasmine@~3.3.8":
   version "3.3.16"
-  resolved "https://registry.npm.taobao.org/@types/jasmine/download/@types/jasmine-3.3.16.tgz?cache=0&sync_timestamp=1616804635082&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fjasmine%2Fdownload%2F%40types%2Fjasmine-3.3.16.tgz#7c84074f5d7f84da9a14f816ccfb9aeb4da13f27"
+  resolved "https://registry.npm.taobao.org/@types/jasmine/download/@types/jasmine-3.3.16.tgz#7c84074f5d7f84da9a14f816ccfb9aeb4da13f27"
   integrity sha1-fIQHT11/hNqaFPgWzPua602hPyc=
 
 "@types/jasminewd2@~2.0.3":
   version "2.0.8"
-  resolved "https://registry.npm.taobao.org/@types/jasminewd2/download/@types/jasminewd2-2.0.8.tgz?cache=0&sync_timestamp=1613379563370&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fjasminewd2%2Fdownload%2F%40types%2Fjasminewd2-2.0.8.tgz#67afe5098d5ef2386073a7b7384b69a840dfe93b"
+  resolved "https://registry.npm.taobao.org/@types/jasminewd2/download/@types/jasminewd2-2.0.8.tgz#67afe5098d5ef2386073a7b7384b69a840dfe93b"
   integrity sha1-Z6/lCY1e8jhgc6e3OEtpqEDf6Ts=
   dependencies:
     "@types/jasmine" "*"
@@ -447,12 +447,12 @@
 
 "@types/node@*":
   version "14.14.37"
-  resolved "https://registry.npm.taobao.org/@types/node/download/@types/node-14.14.37.tgz?cache=0&sync_timestamp=1616803582959&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fnode%2Fdownload%2F%40types%2Fnode-14.14.37.tgz#a3dd8da4eb84a996c36e331df98d82abd76b516e"
+  resolved "https://registry.npm.taobao.org/@types/node/download/@types/node-14.14.37.tgz#a3dd8da4eb84a996c36e331df98d82abd76b516e"
   integrity sha1-o92NpOuEqZbDbjMd+Y2Cq9drUW4=
 
 "@types/node@~8.9.4":
   version "8.9.5"
-  resolved "https://registry.npm.taobao.org/@types/node/download/@types/node-8.9.5.tgz?cache=0&sync_timestamp=1616803582959&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fnode%2Fdownload%2F%40types%2Fnode-8.9.5.tgz#162b864bc70be077e6db212b322754917929e976"
+  resolved "https://registry.npm.taobao.org/@types/node/download/@types/node-8.9.5.tgz#162b864bc70be077e6db212b322754917929e976"
   integrity sha1-FiuGS8cL4Hfm2yErMidUkXkp6XY=
 
 "@types/q@^0.0.32":
@@ -2335,12 +2335,12 @@ ecc-jsbn@~0.1.1:
 
 echarts-wordcloud@^1.1.3:
   version "1.1.3"
-  resolved "https://registry.npm.taobao.org/echarts-wordcloud/download/echarts-wordcloud-1.1.3.tgz?cache=0&sync_timestamp=1610777755404&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fecharts-wordcloud%2Fdownload%2Fecharts-wordcloud-1.1.3.tgz#07b140c8ba76b19c317b43c310f3d5dc99289ff2"
+  resolved "https://registry.npm.taobao.org/echarts-wordcloud/download/echarts-wordcloud-1.1.3.tgz#07b140c8ba76b19c317b43c310f3d5dc99289ff2"
   integrity sha1-B7FAyLp2sZwxe0PDEPPV3Jkon/I=
 
 echarts@^4.6.0:
   version "4.9.0"
-  resolved "https://registry.npm.taobao.org/echarts/download/echarts-4.9.0.tgz?cache=0&sync_timestamp=1612592564808&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fecharts%2Fdownload%2Fecharts-4.9.0.tgz#a9b9baa03f03a2a731e6340c55befb57a9e1347d"
+  resolved "https://registry.npm.taobao.org/echarts/download/echarts-4.9.0.tgz#a9b9baa03f03a2a731e6340c55befb57a9e1347d"
   integrity sha1-qbm6oD8Doqcx5jQMVb77V6nhNH0=
   dependencies:
     zrender "4.3.2"
@@ -3977,22 +3977,22 @@ istanbul-reports@^2.2.5:
 
 jasmine-core@^3.3:
   version "3.7.1"
-  resolved "https://registry.npm.taobao.org/jasmine-core/download/jasmine-core-3.7.1.tgz?cache=0&sync_timestamp=1616115717801&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fjasmine-core%2Fdownload%2Fjasmine-core-3.7.1.tgz#0401327f6249eac993d47bbfa18d4e8efacfb561"
+  resolved "https://registry.npm.taobao.org/jasmine-core/download/jasmine-core-3.7.1.tgz#0401327f6249eac993d47bbfa18d4e8efacfb561"
   integrity sha1-BAEyf2JJ6smT1Hu/oY1OjvrPtWE=
 
 jasmine-core@~2.8.0:
   version "2.8.0"
-  resolved "https://registry.npm.taobao.org/jasmine-core/download/jasmine-core-2.8.0.tgz?cache=0&sync_timestamp=1616115717801&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fjasmine-core%2Fdownload%2Fjasmine-core-2.8.0.tgz#bcc979ae1f9fd05701e45e52e65d3a5d63f1a24e"
+  resolved "https://registry.npm.taobao.org/jasmine-core/download/jasmine-core-2.8.0.tgz#bcc979ae1f9fd05701e45e52e65d3a5d63f1a24e"
   integrity sha1-vMl5rh+f0FcB5F5S5l06XWPxok4=
 
 jasmine-core@~3.4.0:
   version "3.4.0"
-  resolved "https://registry.npm.taobao.org/jasmine-core/download/jasmine-core-3.4.0.tgz?cache=0&sync_timestamp=1616115717801&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fjasmine-core%2Fdownload%2Fjasmine-core-3.4.0.tgz#2a74618e966026530c3518f03e9f845d26473ce3"
+  resolved "https://registry.npm.taobao.org/jasmine-core/download/jasmine-core-3.4.0.tgz#2a74618e966026530c3518f03e9f845d26473ce3"
   integrity sha1-KnRhjpZgJlMMNRjwPp+EXSZHPOM=
 
 jasmine-spec-reporter@~4.2.1:
   version "4.2.1"
-  resolved "https://registry.npm.taobao.org/jasmine-spec-reporter/download/jasmine-spec-reporter-4.2.1.tgz?cache=0&sync_timestamp=1618065491334&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fjasmine-spec-reporter%2Fdownload%2Fjasmine-spec-reporter-4.2.1.tgz#1d632aec0341670ad324f92ba84b4b32b35e9e22"
+  resolved "https://registry.npm.taobao.org/jasmine-spec-reporter/download/jasmine-spec-reporter-4.2.1.tgz#1d632aec0341670ad324f92ba84b4b32b35e9e22"
   integrity sha1-HWMq7ANBZwrTJPkrqEtLMrNeniI=
   dependencies:
     colors "1.1.2"
@@ -5892,21 +5892,21 @@ run-queue@^1.0.0, run-queue@^1.0.3:
 
 rxjs@6.4.0, rxjs@~6.4.0:
   version "6.4.0"
-  resolved "https://registry.npm.taobao.org/rxjs/download/rxjs-6.4.0.tgz?cache=0&sync_timestamp=1617210842373&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Frxjs%2Fdownload%2Frxjs-6.4.0.tgz#f3bb0fe7bda7fb69deac0c16f17b50b0b8790504"
+  resolved "https://registry.npm.taobao.org/rxjs/download/rxjs-6.4.0.tgz#f3bb0fe7bda7fb69deac0c16f17b50b0b8790504"
   integrity sha1-87sP572n+2nerAwW8XtQsLh5BQQ=
   dependencies:
     tslib "^1.9.0"
 
 rxjs@6.5.4:
   version "6.5.4"
-  resolved "https://registry.npm.taobao.org/rxjs/download/rxjs-6.5.4.tgz?cache=0&sync_timestamp=1617210842373&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Frxjs%2Fdownload%2Frxjs-6.5.4.tgz#e0777fe0d184cec7872df147f303572d414e211c"
+  resolved "https://registry.npm.taobao.org/rxjs/download/rxjs-6.5.4.tgz#e0777fe0d184cec7872df147f303572d414e211c"
   integrity sha1-4Hd/4NGEzseHLfFH8wNXLUFOIRw=
   dependencies:
     tslib "^1.9.0"
 
 rxjs@^6.4.0:
   version "6.6.7"
-  resolved "https://registry.npm.taobao.org/rxjs/download/rxjs-6.6.7.tgz?cache=0&sync_timestamp=1617210842373&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Frxjs%2Fdownload%2Frxjs-6.6.7.tgz#90ac018acabf491bf65044235d5863c4dab804c9"
+  resolved "https://registry.npm.taobao.org/rxjs/download/rxjs-6.6.7.tgz#90ac018acabf491bf65044235d5863c4dab804c9"
   integrity sha1-kKwBisq/SRv2UEQjXVhjxNq4BMk=
   dependencies:
     tslib "^1.9.0"
@@ -6872,7 +6872,7 @@ trim-right@^1.0.1:
 
 ts-node@~7.0.0:
   version "7.0.1"
-  resolved "https://registry.npm.taobao.org/ts-node/download/ts-node-7.0.1.tgz?cache=0&sync_timestamp=1607350719034&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fts-node%2Fdownload%2Fts-node-7.0.1.tgz#9562dc2d1e6d248d24bc55f773e3f614337d9baf"
+  resolved "https://registry.npm.taobao.org/ts-node/download/ts-node-7.0.1.tgz#9562dc2d1e6d248d24bc55f773e3f614337d9baf"
   integrity sha1-lWLcLR5tJI0kvFX3c+P2FDN9m68=
   dependencies:
     arrify "^1.0.0"
@@ -6886,17 +6886,17 @@ ts-node@~7.0.0:
 
 tslib@1.10.0:
   version "1.10.0"
-  resolved "https://registry.npm.taobao.org/tslib/download/tslib-1.10.0.tgz?cache=0&sync_timestamp=1617647074515&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Ftslib%2Fdownload%2Ftslib-1.10.0.tgz#c3c19f95973fb0a62973fb09d90d961ee43e5c8a"
+  resolved "https://registry.npm.taobao.org/tslib/download/tslib-1.10.0.tgz#c3c19f95973fb0a62973fb09d90d961ee43e5c8a"
   integrity sha1-w8GflZc/sKYpc/sJ2Q2WHuQ+XIo=
 
 tslib@^1.11.1, tslib@^1.7.1, tslib@^1.8.0, tslib@^1.8.1, tslib@^1.9.0:
   version "1.14.1"
-  resolved "https://registry.npm.taobao.org/tslib/download/tslib-1.14.1.tgz?cache=0&sync_timestamp=1617647074515&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Ftslib%2Fdownload%2Ftslib-1.14.1.tgz#cf2d38bdc34a134bcaf1091c41f6619e2f672d00"
+  resolved "https://registry.npm.taobao.org/tslib/download/tslib-1.14.1.tgz#cf2d38bdc34a134bcaf1091c41f6619e2f672d00"
   integrity sha1-zy04vcNKE0vK8QkcQfZhni9nLQA=
 
 tslint@~5.15.0:
   version "5.15.0"
-  resolved "https://registry.npm.taobao.org/tslint/download/tslint-5.15.0.tgz?cache=0&sync_timestamp=1600702172917&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Ftslint%2Fdownload%2Ftslint-5.15.0.tgz#6ffb180986d63afa1e531feb2a134dbf961e27d3"
+  resolved "https://registry.npm.taobao.org/tslint/download/tslint-5.15.0.tgz#6ffb180986d63afa1e531feb2a134dbf961e27d3"
   integrity sha1-b/sYCYbWOvoeUx/rKhNNv5YeJ9M=
   dependencies:
     babel-code-frame "^6.22.0"
@@ -6952,7 +6952,7 @@ typedarray@^0.0.6:
 
 typescript@3.5.3, typescript@~3.5.3:
   version "3.5.3"
-  resolved "https://registry.npm.taobao.org/typescript/download/typescript-3.5.3.tgz?cache=0&sync_timestamp=1618125897891&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Ftypescript%2Fdownload%2Ftypescript-3.5.3.tgz#c830f657f93f1ea846819e929092f5fe5983e977"
+  resolved "https://registry.npm.taobao.org/typescript/download/typescript-3.5.3.tgz#c830f657f93f1ea846819e929092f5fe5983e977"
   integrity sha1-yDD2V/k/HqhGgZ6SkJL1/lmD6Xc=
 
 ultron@~1.1.0:
