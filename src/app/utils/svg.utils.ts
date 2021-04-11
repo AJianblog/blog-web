@@ -1,9 +1,9 @@
-import {MatIconRegistry} from '@angular/material';
+import { MatIconRegistry } from '@angular/material/icon';
 import {DomSanitizer} from '@angular/platform-browser';
 
 export const loadSvgResource = (matIconRegistry: MatIconRegistry, domSanitizer: DomSanitizer) => {
 
-  const baseUrl: string = 'assets/svg';
+  const baseUrl = 'assets/svg';
   // 文件夹图标
   matIconRegistry.addSvgIcon('mkdir', domSanitizer.bypassSecurityTrustResourceUrl(`${baseUrl}/mkdir.svg`));
   // 标签
