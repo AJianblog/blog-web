@@ -1,17 +1,17 @@
 import {Component, OnInit} from '@angular/core';
-import {BlogTypeService} from "../../../@core/interface/blog-type.service";
-import {BlogType} from "../../../model/blog-type";
-import {CodeEnum} from "../../../entity/code-enum";
-import {MatDialog} from "@angular/material/dialog";
+import {BlogTypeService} from '../../../@core/interface/blog-type.service';
+import {BlogType} from '../../../model/blog-type';
+import {CodeEnum} from '../../../entity/code-enum';
+import {MatDialog} from '@angular/material/dialog';
 import {
     EditBlogTypeDialogComponent,
     EditBlogTypeDialogInputModule
-} from "./edit-blog-type-dialog/edit-blog-type-dialog.component";
-import {SnackBarService} from "../../../service/snackBar.service";
+} from './edit-blog-type-dialog/edit-blog-type-dialog.component';
+import {SnackBarService} from '../../../service/snackBar.service';
 import {
     ConfirmDialogComponent,
     ConfirmDialogInputModule
-} from "../../../@theme/component/confirm-dialog/confirm-dialog.component";
+} from '../../../@theme/component/confirm-dialog/confirm-dialog.component';
 
 @Component({
     selector: 'app-blog-type',
@@ -43,7 +43,7 @@ export class BlogTypeComponent implements OnInit {
                 this.blogType = data.data;
             }
 
-        })
+        });
     }
 
     /**
@@ -66,7 +66,7 @@ export class BlogTypeComponent implements OnInit {
                         this.snackbarService.success(data.message);
                         this.findAllBlogType();
                     }
-                })
+                });
             }
         });
     }
@@ -120,7 +120,7 @@ export class BlogTypeComponent implements OnInit {
                 this.snackbarService.success(data.message);
                 this.findAllBlogType();
             }
-        })
+        });
     }
 
 }
