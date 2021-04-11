@@ -48,10 +48,10 @@ const MAT_MODULE = [
 })
 export class MaterialModule {
 
-  static forRoot(): ModuleWithProviders {
-    return <ModuleWithProviders>{
+  static forRoot(): ModuleWithProviders<any> {
+    return {
       ngModule: MaterialModule,
       providers: []
-    }
+    } as ModuleWithProviders<any>;
   }
 }

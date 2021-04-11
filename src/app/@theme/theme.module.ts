@@ -55,10 +55,10 @@ import { FooterComponent } from './component/footer/footer.component';
 })
 export class ThemeModule {
 
-  static forRoot(): ModuleWithProviders {
-    return <ModuleWithProviders>{
+  static forRoot(): ModuleWithProviders<any> {
+    return {
       ngModule: ThemeModule,
       providers: []
-    }
+    } as ModuleWithProviders<any>;
   }
 }
