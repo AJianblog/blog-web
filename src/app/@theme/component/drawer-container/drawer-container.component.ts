@@ -1,5 +1,5 @@
 import {Component, Input, OnInit, ViewChild} from '@angular/core';
-import {MatDrawer} from "@angular/material/sidenav";
+import {MatDrawer} from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-drawer-container',
@@ -8,11 +8,11 @@ import {MatDrawer} from "@angular/material/sidenav";
 })
 export class DrawerContainerComponent implements OnInit {
 
-  @ViewChild("drawer", {static: false})
+  @ViewChild('drawer')
   drawer: MatDrawer;
 
   @Input()
-  model: string = 'over';
+  model = 'over';
 
   constructor() {
   }

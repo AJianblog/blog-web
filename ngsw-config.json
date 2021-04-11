@@ -11,7 +11,8 @@
           "/index.html",
           "/pwa-manifest.json",
           "/*.css",
-          "/*.js"
+          "/*.js",
+          "/manifest.webmanifest"
         ]
       }
     }, {

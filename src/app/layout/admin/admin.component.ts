@@ -1,7 +1,7 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {DrawerContainerComponent} from "../../@theme/component/drawer-container/drawer-container.component";
-import {SidenavService} from "../../@core/interface/sidenav.service";
-import {SidenavMenu} from "../../model/sidenav-menu";
+import {DrawerContainerComponent} from '../../@theme/component/drawer-container/drawer-container.component';
+import {SidenavService} from '../../@core/interface/sidenav.service';
+import {SidenavMenu} from '../../model/sidenav-menu';
 
 @Component({
   selector: 'app-admin',
@@ -10,7 +10,7 @@ import {SidenavMenu} from "../../model/sidenav-menu";
 })
 export class AdminComponent implements OnInit {
 
-  @ViewChild('drawerContainerComponent', {static: false})
+  @ViewChild('drawerContainerComponent')
   drawerContainerComponent: DrawerContainerComponent;
 
   sidenavMenus: SidenavMenu[];

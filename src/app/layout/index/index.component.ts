@@ -1,10 +1,10 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {DrawerContainerComponent} from "../../@theme/component/drawer-container/drawer-container.component";
-import {SidenavService} from "../../@core/interface/sidenav.service";
-import {SidenavMenu} from "../../model/sidenav-menu";
-import {ActivatedRoute, Params, Router} from "@angular/router";
-import {TagWordCloud} from "../../entity/chart/tag-word-cloud";
-import {BlogType} from "../../model/blog-type";
+import {DrawerContainerComponent} from '../../@theme/component/drawer-container/drawer-container.component';
+import {SidenavService} from '../../@core/interface/sidenav.service';
+import {SidenavMenu} from '../../model/sidenav-menu';
+import {ActivatedRoute, Params, Router} from '@angular/router';
+import {TagWordCloud} from '../../entity/chart/tag-word-cloud';
+import {BlogType} from '../../model/blog-type';
 
 @Component({
   selector: 'app-index',
@@ -34,7 +34,7 @@ export class IndexComponent implements OnInit {
   typeName: string = null;
 
 
-  @ViewChild("drawerComponent", {static: false})
+  @ViewChild('drawerComponent')
   drawerComponent: DrawerContainerComponent;
 
   constructor(private sidenavService: SidenavService, private router: Router, private route: ActivatedRoute) {
@@ -60,12 +60,12 @@ export class IndexComponent implements OnInit {
   getSidenav() {
     this.sidenavService.getUserSidenav().subscribe(data => {
       this.sidenavMenu = data;
-    })
+    });
   }
 
   /**
    * 标签点击事件
-   * @param tag
+   * @param tag 标签
    */
   tagClick(tag: TagWordCloud) {
     this.drawerComponent.toggle();
@@ -99,7 +99,7 @@ export class IndexComponent implements OnInit {
    * 路由跳转
    */
   routerJump() {
-    let queryParams: any = {};
+    const queryParams: any = {};
     if (this.typeName !== null) {
       queryParams.type = this.typeName;
     }
@@ -108,7 +108,7 @@ export class IndexComponent implements OnInit {
       queryParams.tagName = this.tagName;
     }
     this.router.navigate(['./'], {
-      queryParams: queryParams,
+      queryParams,
       relativeTo: this.route
     });
   }
