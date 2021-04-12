@@ -136,10 +136,10 @@
   dependencies:
     tslib "^2.0.0"
 
-"@angular/cdk@~10.2.7":
-  version "10.2.7"
-  resolved "https://registry.npm.taobao.org/@angular/cdk/download/@angular/cdk-10.2.7.tgz#0ff82eb91b2653ea26909c57a460d4593b44f186"
-  integrity sha1-D/guuRsmU+omkJxXpGDUWTtE8YY=
+"@angular/cdk@~11.2.8":
+  version "11.2.8"
+  resolved "https://registry.npm.taobao.org/@angular/cdk/download/@angular/cdk-11.2.8.tgz#2cf8be9bbdbe651e655ef15b38f3ec6fc78517d4"
+  integrity sha1-LPi+m72+ZR5lXvFbOPPsb8eFF9Q=
   dependencies:
     tslib "^2.0.0"
   optionalDependencies:
@@ -237,10 +237,10 @@
   resolved "https://registry.npm.taobao.org/@angular/language-service/download/@angular/language-service-11.2.9.tgz#ecf47b96e0dff42c0447dbd36947ff4ebe160645"
   integrity sha1-7PR7luDf9CwER9vTaUf/Tr4WBkU=
 
-"@angular/material@^10.2.7":
-  version "10.2.7"
-  resolved "https://registry.npm.taobao.org/@angular/material/download/@angular/material-10.2.7.tgz#b84aeeca997dc64fbcc7969540e22434315bab68"
-  integrity sha1-uEruypl9xk+8x5aVQOIkNDFbq2g=
+"@angular/material@^11.2.8":
+  version "11.2.8"
+  resolved "https://registry.npm.taobao.org/@angular/material/download/@angular/material-11.2.8.tgz#c0fb8c3b871bc2d477f6ad980918d47579f410fe"
+  integrity sha1-wPuMO4cbwtR39q2YCRjUdXn0EP4=
   dependencies:
     tslib "^2.0.0"
 
