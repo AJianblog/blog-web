@@ -128,10 +128,12 @@
   dependencies:
     tslib "^2.0.0"
 
-"@angular/cdk@~9.2.4":
-  version "9.2.4"
-  resolved "https://registry.npm.taobao.org/@angular/cdk/download/@angular/cdk-9.2.4.tgz"
-  integrity sha1-hBOVi9J15MNL47lvVkRGcd0wupM=
+"@angular/cdk@~10.2.7":
+  version "10.2.7"
+  resolved "https://registry.npm.taobao.org/@angular/cdk/download/@angular/cdk-10.2.7.tgz#0ff82eb91b2653ea26909c57a460d4593b44f186"
+  integrity sha1-D/guuRsmU+omkJxXpGDUWTtE8YY=
+  dependencies:
+    tslib "^2.0.0"
   optionalDependencies:
     parse5 "^5.0.0"
 
@@ -213,10 +215,12 @@
   resolved "https://registry.npm.taobao.org/@angular/language-service/download/@angular/language-service-10.2.4.tgz#0c533149c110445ae67a7fd833c5aa03182fcec0"
   integrity sha1-DFMxScEQRFrmen/YM8WqAxgvzsA=
 
-"@angular/material@^9.2.4":
-  version "9.2.4"
-  resolved "https://registry.npm.taobao.org/@angular/material/download/@angular/material-9.2.4.tgz"
-  integrity sha1-JmbvYG+7iNYPji8YxeT5Sj3Vctg=
+"@angular/material@^10.2.7":
+  version "10.2.7"
+  resolved "https://registry.npm.taobao.org/@angular/material/download/@angular/material-10.2.7.tgz#b84aeeca997dc64fbcc7969540e22434315bab68"
+  integrity sha1-uEruypl9xk+8x5aVQOIkNDFbq2g=
+  dependencies:
+    tslib "^2.0.0"
 
 "@angular/platform-browser-dynamic@~10.2.4":
   version "10.2.4"
@@ -4141,11 +4145,6 @@ graceful-fs@^4.1.11, graceful-fs@^4.1.15, graceful-fs@^4.1.2, graceful-fs@^4.1.6
   version "4.2.6"
   resolved "https://registry.npm.taobao.org/graceful-fs/download/graceful-fs-4.2.6.tgz"
   integrity sha1-/wQLKwhTsjw9MQJ1I3BvGIXXa+4=
-
-hammerjs@^2.0.8:
-  version "2.0.8"
-  resolved "https://registry.npm.taobao.org/hammerjs/download/hammerjs-2.0.8.tgz"
-  integrity sha1-BO93hiz/K7edMPdpIJWTAiK/YPE=
 
 handle-thing@^2.0.0:
   version "2.0.1"
