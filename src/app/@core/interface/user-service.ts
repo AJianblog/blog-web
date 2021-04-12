@@ -1,6 +1,6 @@
-import {Observable} from "rxjs";
-import {ReturnModel} from "../../entity/return-model";
-import {User} from "../../model/user";
+import {Observable} from 'rxjs';
+import {ReturnModel} from '../../entity/return-model';
+import {User} from '../../model/user';
 
 export abstract class UserService {
   /**
@@ -10,7 +10,7 @@ export abstract class UserService {
 
   /**
    * 用户注册
-   * @param register
+   * @param register 注册信息
    */
   abstract register(register: { account: string, password: string }): Observable<ReturnModel<User>>;
 

@@ -9,7 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "lib": "npm i @hzjanger/z-markdown@latest",
-    "install:z-table": "npm install ./libs/z-table-0.0.1.tgz",
+    "install:z-table": "yarn add ./libs/z-table-0.0.1.tgz",
     "install:z-markdown": "yarn add ./libs/hzjanger-z-markdown-0.0.7.tgz"
   },
   "private": true,
@@ -35,6 +35,7 @@
     "ngx-echarts": "^4.2.2",
     "rxjs": "~6.6.7",
     "tslib": "^2.0.0",
+    "z-table": "./libs/z-table-0.0.1.tgz",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {

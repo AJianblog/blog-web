@@ -1,18 +1,18 @@
 import {Component, OnInit} from '@angular/core';
-import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
-import {MatDialog} from "@angular/material/dialog";
+import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
+import {MatDialog} from '@angular/material/dialog';
 import {
   ArticleInfoDialogComponent,
   ArticleInfoDialogInputData
-} from "./article-info-dialog/article-info-dialog.component";
-import {BlogService} from "../../../@core/interface/blog.service";
-import {Blog} from "../../../model/blog";
-import {StorageMessage} from "../../../utils/storage-message";
-import {ActivatedRoute, Params, Router} from "@angular/router";
-import {SnackBarService} from "../../../service/snackBar.service";
-import {CodeEnum} from "../../../entity/code-enum";
-import {ReturnModel} from "../../../entity/return-model";
-import {Constant} from "../../../entity/constant";
+} from './article-info-dialog/article-info-dialog.component';
+import {BlogService} from '../../../@core/interface/blog.service';
+import {Blog} from '../../../model/blog';
+import {StorageMessage} from '../../../utils/storage-message';
+import {ActivatedRoute, Params, Router} from '@angular/router';
+import {SnackBarService} from '../../../service/snackBar.service';
+import {CodeEnum} from '../../../entity/code-enum';
+import {ReturnModel} from '../../../entity/return-model';
+import {Constant} from '../../../entity/constant';
 
 @Component({
   selector: 'app-article',
@@ -49,7 +49,7 @@ export class ArticleComponent implements OnInit {
       if (this.blogId) {
         this.findBlogById();
       }
-    })
+    });
   }
 
   /**
@@ -60,7 +60,7 @@ export class ArticleComponent implements OnInit {
       if (data.code === CodeEnum.SUCCESS) {
         this.formGroup.patchValue(data.data);
       }
-    })
+    });
   }
 
   /**
@@ -90,7 +90,7 @@ export class ArticleComponent implements OnInit {
       } else if (data.code === 0) {
         this.openDialog(data.data);
       }
-    })
+    });
   }
 
   /**
@@ -117,27 +117,28 @@ export class ArticleComponent implements OnInit {
           this.updateBlog(updateBlog);
         } else {
           const num = Math.floor(Math.random() * 18 + 1);
-          const blog: Blog = {
-            ...result, ...this.formGroup.value,
+          const saveBlog: Blog = {
+            ...result,
+            ...this.formGroup.value,
             userId,
             imageUrl: `${Constant.blogImageUrlPrefix.replace(/num/, String(num))}`
           };
-          this.saveBlog(blog);
+          this.saveBlog(saveBlog);
         }
       }
-    })
+    });
   }
 
   /**
    * 保存博客
-   * @param blog
+   * @param blog 博客信息
    */
   saveBlog(blog: Blog) {
     this.blogService.addBlog(blog).subscribe(data => {
       if (data.code === CodeEnum.SUCCESS) {
         this.snackBarService.success(data.message);
         const nickName = JSON.parse(StorageMessage.getUserInfo()).nickName;
-        this.router.navigate([`/article/details`, nickName, data.data.id]);
+        this.router.navigate( [ `/article/details`, nickName, data.data.id ] ).then();
       }
     });
   }
@@ -151,7 +152,7 @@ export class ArticleComponent implements OnInit {
       if (data.code === CodeEnum.SUCCESS) {
         this.snackBarService.success(data.message);
         const nickName = JSON.parse(StorageMessage.getUserInfo()).nickName;
-        this.router.navigate([`/blog`, nickName, 'article', this.blogId]);
+        this.router.navigate( [ `/blog`, nickName, 'article', this.blogId ] ).then();
       }
     });
   }

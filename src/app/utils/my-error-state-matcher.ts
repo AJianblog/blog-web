@@ -4,7 +4,7 @@ import { ErrorStateMatcher } from '@angular/material/core';
 export class MyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
     const isSubmitted = form && form.submitted;
-    const controlInvalid : boolean = (control && control.invalid && (control.dirty || control.touched || isSubmitted));
+    const controlInvalid: boolean = (control && control.invalid && (control.dirty || control.touched || isSubmitted));
     let formInvalid: boolean;
     // 点击并且离开了
     if (control && control.touched) {
