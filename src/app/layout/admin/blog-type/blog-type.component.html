@@ -1,26 +1,8 @@
-<app-admin-sub-content (createPress)="create()"></app-admin-sub-content>
-
 <div class="p-2">
-  <table *ngIf="blogType" mat-table [dataSource]="blogType" class="mat-elevation-z8">
-
-    <!-- Position Column -->
-    <ng-container *ngFor="let column of displayedColumns" [matColumnDef]="column">
-      <th mat-header-cell *matHeaderCellDef
-          [width]="column === 'operation' ? '100px': 'auto'"> {{description[column]}}</th>
-      <td mat-cell *matCellDef="let element">
-        <ng-template [ngIf]="column !== 'operation'">{{element[column]}}</ng-template>
-        <ng-template [ngIf]="column === 'operation'">
-          <div class="operation-column">
-            <a (click)="editBlogType(element)">编辑</a>
-            <a (click)="deleteBlogType(element)">删除</a>
-          </div>
-        </ng-template>
-
-      </td>
-    </ng-container>
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-  </table>
-
-
+    <z-base-table
+            *ngIf="tableModule"
+            [tableModule]="tableModule"
+            (handleToolsClick)="handleToolsClick($event)"
+            (handleOperatorClick)="handleOperatorClick($event)"
+    ></z-base-table>
 </div>

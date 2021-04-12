@@ -7,6 +7,7 @@ import {MaterialModule} from '../../../@material/material.module';
 import {EditBlogTypeDialogComponent} from './edit-blog-type-dialog/edit-blog-type-dialog.component';
 import {ThemeModule} from '../../../@theme/theme.module';
 import {ReactiveFormsModule} from '@angular/forms';
+import { ZTableModule } from 'z-table';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import {ReactiveFormsModule} from '@angular/forms';
     BlogTypeRoutingModule,
     MaterialModule,
     ThemeModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ZTableModule
   ],
   entryComponents: [
     EditBlogTypeDialogComponent
