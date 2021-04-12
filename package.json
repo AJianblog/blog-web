@@ -8,9 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "lib": "npm i @hzjanger/z-markdown@latest",
-    "install:z-table": "yarn add ./libs/z-table-0.0.1.tgz",
-    "install:z-markdown": "yarn add ./libs/hzjanger-z-markdown-0.0.7.tgz"
+    "install:lib": "yarn add @hzjanger/z-markdown@latest @hzjanger/z-table@latest"
   },
   "private": true,
   "dependencies": {
@@ -26,7 +24,8 @@
     "@angular/router": "~11.2.9",
     "@angular/service-worker": "~11.2.9",
     "@auth0/angular-jwt": "^4.0.0",
-    "@hzjanger/z-markdown": "./libs/hzjanger-z-markdown-0.0.7.tgz",
+    "@hzjanger/z-markdown": "^0.0.9",
+    "@hzjanger/z-table": "^0.0.1",
     "codemirror": "^5.52.0",
     "echarts": "^4.6.0",
     "echarts-wordcloud": "^1.1.3",

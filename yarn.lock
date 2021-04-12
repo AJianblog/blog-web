@@ -1151,11 +1151,19 @@
   resolved "https://registry.npm.taobao.org/@discoveryjs/json-ext/download/@discoveryjs/json-ext-0.5.2.tgz?cache=0&sync_timestamp=1608991822359&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40discoveryjs%2Fjson-ext%2Fdownload%2F%40discoveryjs%2Fjson-ext-0.5.2.tgz#8f03a22a04de437254e8ce8cc84ba39689288752"
   integrity sha1-jwOiKgTeQ3JU6M6MyEujlokoh1I=
 
-"@hzjanger/z-markdown@./libs/hzjanger-z-markdown-0.0.7.tgz":
-  version "0.0.7"
-  resolved "./libs/hzjanger-z-markdown-0.0.7.tgz#73f067a35670786608649f32c63a0ee1e07ffca7"
+"@hzjanger/z-markdown@^0.0.9":
+  version "0.0.9"
+  resolved "https://registry.npm.taobao.org/@hzjanger/z-markdown/download/@hzjanger/z-markdown-0.0.9.tgz#9164a8d610e58457602d3369a33693407ad77fc6"
+  integrity sha1-kWSo1hDlhFdgLTNpozaTQHrXf8Y=
   dependencies:
     tslib "^1.10.0"
+
+"@hzjanger/z-table@^0.0.1":
+  version "0.0.1"
+  resolved "https://registry.npm.taobao.org/@hzjanger/z-table/download/@hzjanger/z-table-0.0.1.tgz#ad72871b5b2917e2816a1e42aa4848e0a57957fd"
+  integrity sha1-rXKHG1spF+KBah5CqkhI4KV5V/0=
+  dependencies:
+    tslib "^2.0.0"
 
 "@istanbuljs/schema@^0.1.2":
   version "0.1.3"
