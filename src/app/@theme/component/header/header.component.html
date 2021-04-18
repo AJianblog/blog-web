@@ -4,7 +4,7 @@
       <button *ngIf="showMenu" mat-icon-button class="menu" (click)="menuPress.emit()">
         <mat-icon svgIcon="menu"></mat-icon>
       </button>
-      <a [routerLink]="['/blog', nickName]">Angel</a>
+      <a mat-button [routerLink]="['/blog']">首页</a>
     </div>
     <div *ngIf="menus && menus.length > 0">
       <a *ngFor="let menu of menus" class="menu-item" [routerLink]="menu.router">{{ menu.title }}</a>

@@ -2,9 +2,10 @@ import {Component, OnInit, ViewChild} from '@angular/core';
 import {DrawerContainerComponent} from '../../@theme/component/drawer-container/drawer-container.component';
 import {SidenavService} from '../../@core/interface/sidenav.service';
 import {SidenavMenu} from '../../model/sidenav-menu';
-import {ActivatedRoute, Params, Router} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {TagWordCloud} from '../../entity/chart/tag-word-cloud';
 import {BlogType} from '../../model/blog-type';
+import { getNickName } from '../../utils/localStorageInfo/userInfo';
 
 @Component({
   selector: 'app-index',
@@ -21,7 +22,9 @@ export class IndexComponent implements OnInit {
   /**
    * 用户的昵称
    */
-  nickName: string = null;
+  get nickName(): string {
+    return getNickName();
+  }
 
   /**
    * 标签名称
@@ -41,9 +44,6 @@ export class IndexComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.route.paramMap.subscribe((param: Params) => {
-      this.nickName = param.get('nickName');
-    });
     this.getSidenav();
   }
 

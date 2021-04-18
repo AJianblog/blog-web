@@ -20,7 +20,7 @@ const routes: Routes = [
   //   loadChildren: () => import('./layout/article/article.module').then(mod => mod.ArticleModule)
   // },
   {
-    path: 'blog/:nickName',
+    path: 'blog',
     loadChildren: () => import('./layout/index/index.module').then(module => module.IndexModule)
   },
   {
@@ -31,8 +31,7 @@ const routes: Routes = [
     path: 'index/:nickName',
     loadChildren: () => import('./layout/angel/angel.module').then(mod => mod.AngelModule)
 
-  },
-  {path: '', redirectTo: 'blog/hzjangel', pathMatch: 'full'}
+  }
 ];
 
 @NgModule({

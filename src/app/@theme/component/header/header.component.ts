@@ -1,10 +1,9 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {AuthorService} from "../../../@core/interface/author.service";
-import {ActivatedRoute, Router} from "@angular/router";
-import {FormBuilder, FormGroup} from "@angular/forms";
-import {UserService} from "../../../@core/interface/user-service";
-import {CodeEnum} from "../../../entity/code-enum";
-import {User} from "../../../model/user";
+import {AuthorService} from '../../../@core/interface/author.service';
+import {ActivatedRoute, Router} from '@angular/router';
+import {FormBuilder, FormGroup} from '@angular/forms';
+import {User} from '../../../model/user';
+import { getUserInfo } from '../../../utils/localStorageInfo/userInfo';
 
 @Component({
   selector: 'app-header',
@@ -13,17 +12,17 @@ import {User} from "../../../model/user";
 })
 export class HeaderComponent implements OnInit {
 
-  nickName: string;
-
-  userInfo: User;
+  get userInfo(): User {
+    return getUserInfo();
+  }
 
   formGroup: FormGroup;
 
   @Input()
-  showMenu: boolean = true;
+  showMenu = true;
 
   @Input()
-  menus: { router: string; title: string }[] = []
+  menus: { router: string; title: string }[] = [];
 
   /**
    * 菜单按钮点击事件
@@ -31,13 +30,10 @@ export class HeaderComponent implements OnInit {
   @Output()
   menuPress: EventEmitter<void> = new EventEmitter<void>();
 
-  constructor(private authorService: AuthorService, private route: ActivatedRoute, private router: Router, private fb: FormBuilder,
-              private userService: UserService) {
+  constructor(private authorService: AuthorService, private route: ActivatedRoute, private router: Router, private fb: FormBuilder) {
   }
 
   ngOnInit() {
-    this.nickName = this.route.snapshot.paramMap.get('nickName');
-    this.getUserInfo();
     this.formGroup = this.fb.group({
       search: [null]
     });
@@ -58,7 +54,7 @@ export class HeaderComponent implements OnInit {
   }
 
   search() {
-    let queryParams: any = {
+    const queryParams: any = {
       pageIndex: 1,
       pageSize: 10,
       search: this.formGroup.value.search
@@ -66,19 +62,10 @@ export class HeaderComponent implements OnInit {
     if (this.route.snapshot.queryParamMap.get('type')) {
       queryParams.type = this.route.snapshot.queryParamMap.get('type');
     }
-    this.router.navigate(['/blog', this.nickName], {
-      queryParams: queryParams,
+    this.router.navigate(['/blog'], {
+      queryParams,
       relativeTo: this.route
-    })
-
-  }
-
-  getUserInfo() {
-    this.userService.findUserByNickname(this.nickName).subscribe(data => {
-      if (data.code === CodeEnum.SUCCESS) {
-        this.userInfo = data.data;
-      }
-    })
+    });
   }
 
 }
