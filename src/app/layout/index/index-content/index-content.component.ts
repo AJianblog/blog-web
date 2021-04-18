@@ -1,14 +1,15 @@
 import {Component, OnInit} from '@angular/core';
-import {BlogService} from "../../../@core/interface/blog.service";
-import {PageResult} from "../../../entity/page-result";
-import {CodeEnum} from "../../../entity/code-enum";
-import {BlogTypeAccountService} from "../../../@core/interface/blog-type-account.service";
-import {BlogTypeAccount} from "../../../model/blog-type-account";
-import {PageEvent} from "@angular/material/paginator";
-import {ActivatedRoute, Params, Router} from "@angular/router";
-import {BlogAndTypeAndTagGroup} from "../../../entity/group/BlogAndTypeAndTagGroup";
-import {BlogType} from "../../../model/blog-type";
-import {Tag} from "../../../model/tag";
+import {BlogService} from '../../../@core/interface/blog.service';
+import {PageResult} from '../../../entity/page-result';
+import {CodeEnum} from '../../../entity/code-enum';
+import {BlogTypeAccountService} from '../../../@core/interface/blog-type-account.service';
+import {BlogTypeAccount} from '../../../model/blog-type-account';
+import {PageEvent} from '@angular/material/paginator';
+import {ActivatedRoute, Params, Router} from '@angular/router';
+import {BlogAndTypeAndTagGroup} from '../../../entity/group/BlogAndTypeAndTagGroup';
+import {BlogType} from '../../../model/blog-type';
+import {Tag} from '../../../model/tag';
+import { getNickName } from '../../../utils/localStorageInfo/userInfo';
 
 @Component({
   selector: 'app-index-content',
@@ -27,17 +28,19 @@ export class IndexContentComponent implements OnInit {
   /**
    * 用户的昵称
    */
-  nickName: string;
+  get nickName(): string{
+    return getNickName();
+  }
 
   /**
    * 页条数
    */
-  pageSize: number = 10;
+  pageSize = 10;
 
   /**
    * 页数
    */
-  pageIndex: number = 1;
+  pageIndex = 1;
 
   /**
    * 搜索博客分类内容
@@ -59,7 +62,6 @@ export class IndexContentComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.nickName = this.route.snapshot.paramMap.get('nickName');
     this.route.queryParamMap.subscribe((params: Params) => {
       this.pageIndex = +params.get('pageIndex') || 1;
       this.pageSize = +params.get('pageSize') || 10;
@@ -73,38 +75,6 @@ export class IndexContentComponent implements OnInit {
   }
 
   /**
-   onInit(data: TagWordCloud[]) {
-    this.chartOption = {
-      tooltip: {
-        show: true
-      },
-      series: [{
-        type: "wordCloud",
-        shape: 'circle',
-        gridSize: 6,
-        sizeRange: [12, 50],
-        textStyle: {
-          normal: {
-            color: function () {
-              return 'rgb(' + [
-                Math.round(Math.random() * 160),
-                Math.round(Math.random() * 160),
-                Math.round(Math.random() * 160)
-              ].join(',') + ')';
-            }
-          },
-          emphasis: {
-            shadowBlur: 10,
-            shadowColor: '#333'
-          }
-        },
-        data: data,
-      }]
-    };
-  }
-   */
-
-  /**
    * 查找用户最新的博客
    */
   searchUserBlog() {
@@ -114,10 +84,10 @@ export class IndexContentComponent implements OnInit {
         // 滚动到最上面
         window.scrollTo({
           top: 0,
-          behavior: "smooth"
+          behavior: 'smooth'
         });
       }
-    })
+    });
   }
 
   /**
@@ -128,7 +98,7 @@ export class IndexContentComponent implements OnInit {
       if (data.code === CodeEnum.SUCCESS) {
         this.blogTypeAccount = data.data;
       }
-    })
+    });
   }
 
   /**
@@ -145,7 +115,7 @@ export class IndexContentComponent implements OnInit {
    * 构建参数
    */
   routerJump() {
-    let queryParams: any = {
+    const queryParams: any = {
       pageIndex: this.pageIndex,
       pageSize: this.pageSize
     };
@@ -159,10 +129,10 @@ export class IndexContentComponent implements OnInit {
     if (this.tagName !== null) {
       queryParams.tagName = this.tagName;
     }
-    this.router.navigate(['./'], {
-      queryParams: queryParams,
+    this.router.navigate( [ './' ], {
+      queryParams,
       relativeTo: this.route
-    });
+    } ).then();
   }
 
   /**
@@ -186,17 +156,11 @@ export class IndexContentComponent implements OnInit {
   }
 
   /**
-   * 词云图点击事件
-   * @param outputData 点击的数据
+   * 选择博客分类
+   * @param data 博客分类信息
    */
-/*  chartClick(outputData: any) {
-    const tagWordCloud: TagWordCloud = outputData.data;
-    if (tagWordCloud) {
-      this.tagName = tagWordCloud.name;
-      this.pageIndex = 1;
-      this.routerJump();
-    }
-  }*/
-
-
+  choiceBlogType(data) {
+    this.type = data.typeName;
+    this.routerJump();
+  }
 }

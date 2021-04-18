@@ -136,49 +136,20 @@
     width: 350px;
     margin-left: 1rem;
 
-    .card {
-      margin-bottom: 1rem;
+    .mat-card {
+      padding: 0;
     }
 
-    .card-title {
-      background: #1e88e5;
-      border-radius: 5px 5px 0 0;
+    .mat-card-title {
+      font-size: 18px;
       color: #ffffff;
-      padding: .5rem 1rem;
+      margin-bottom: 0;
+      padding: 8px 12px;
+      background-color: #3f51b5;
     }
 
-    .type-menu {
-      list-style: none;
-      border: 1px solid #dbdbdb;
-      border-radius: 0 0 5px 5px;
-
-      .type-menu-item {
-        padding: .5rem 1rem;
-        display: flex;
-        justify-content: space-between;
-
-        span {
-          color: #858585;
-          font-size: .85rem;
-          cursor: pointer;
-        }
-
-        a {
-          text-decoration: none;
-          cursor: pointer;
-
-          &:hover {
-            color: #ea6f5a;
-          }
-        }
-      }
-    }
-
-    .demo-chart {
-      width: 100%;
-      height: 200px;
-      border: 1px solid #dbdbdb;
-      border-radius: 0 0 5px 5px;
+    .mat-line {
+      font-size: 14px;
     }
   }
 
@@ -188,5 +159,20 @@
   .blog-content-box {
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+}
+
+:host ::ng-deep {
+  .right-container {
+    .mat-list-base {
+      .mat-list-item .mat-list-item-content {
+        padding-left: 14px;
+        padding-right: 14px;
+      }
+
+      .active .mat-list-item-content {
+        color: #3f51b5;
+      }
+    }
   }
 }

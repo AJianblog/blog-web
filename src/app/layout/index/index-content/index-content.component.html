@@ -2,7 +2,7 @@
   <div class="left-container">
     <ng-template [ngIf]="pageResult">
       <div class="article" *ngFor="let item of pageResult.rows">
-        <a class="img-box" [routerLink]="['/blog', nickName, 'article', item.blog.id]">
+        <a class="img-box" [routerLink]="['/blog', 'article', item.blog.id]">
           <header matRipple>
             <img alt="图片" [src]="item.blog.imageUrl">
             <div class="action">
@@ -37,27 +37,21 @@
                      (page)="page($event)"></mat-paginator>
     </ng-template>
   </div>
+  <div class="right-container">
+    <mat-card>
+      <mat-card-title>文章分类</mat-card-title>
+      <mat-card-content>
+        <mat-nav-list *ngFor="let item of blogTypeAccount">
+          <mat-list-item [class]="{ active: item.typeName === type }">
+            <a matLine (click)="choiceBlogType(item)">
+              <div class="flex justify-content-between">
+                <span>{{ item.typeName }}</span>
+                <span>{{ item.account }}篇</span>
+              </div>
+            </a>
+          </mat-list-item>
+        </mat-nav-list>
+      </mat-card-content>
+    </mat-card>
+  </div>
 </div>
-
-
-<!--      <div class="right-container">-->
-<!--        <div class="card">-->
-<!--          <div class="card-title">-->
-<!--            <h3>文章分类</h3>-->
-<!--          </div>-->
-<!--          <ul class="type-menu" *ngIf="blogTypeAccount">-->
-<!--            <li class="type-menu-item" *ngFor="let item of blogTypeAccount">-->
-<!--              <a (click)="blogTypeSearch(item)">{{item.typeName}}</a>-->
-<!--              <span>{{item.account}}篇</span>-->
-<!--            </li>-->
-<!--          </ul>-->
-<!--        </div>-->
-
-<!--        <div class="card">-->
-<!--          <div class="card-title">-->
-<!--            <h3>标签</h3>-->
-<!--          </div>-->
-<!--          <div *ngIf="chartOption" echarts [options]="chartOption" class="demo-chart"-->
-<!--               (chartClick)="chartClick($event)"></div>-->
-<!--        </div>-->
-<!--      </div>-->
