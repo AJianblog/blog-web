@@ -1,5 +1,9 @@
 export abstract class AuthorService {
   /**
+   * 登陆后需要重定向到路由
+   */
+  redirectUrl: string;
+  /**
    * 退出登录
    */
   abstract quit();

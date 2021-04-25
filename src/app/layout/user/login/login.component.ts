@@ -1,10 +1,11 @@
 import {Component, OnInit} from '@angular/core';
-import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
-import {ActivatedRoute, Router} from "@angular/router";
-import {UserService} from "../../../@core/interface/user-service";
-import {StorageMessage} from "../../../utils/storage-message";
-import {MatSnackBar} from "@angular/material/snack-bar";
-import {SnackBarService} from "../../../service/snackBar.service";
+import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
+import {ActivatedRoute, Router} from '@angular/router';
+import {UserService} from '../../../@core/interface/user-service';
+import {StorageMessage} from '../../../utils/storage-message';
+import {MatSnackBar} from '@angular/material/snack-bar';
+import {SnackBarService} from '../../../service/snackBar.service';
+import { AuthorService } from '../../../@core/interface/author.service';
 
 /**
  * 登录组件
@@ -22,7 +23,8 @@ export class LoginComponent implements OnInit {
   loginFormGroup: FormGroup;
 
   constructor(private fb: FormBuilder, private userService: UserService, private snackbar: MatSnackBar,
-              private snackBarService: SnackBarService, private route: ActivatedRoute, private router: Router) {
+              private snackBarService: SnackBarService, private route: ActivatedRoute, private router: Router,
+              private authorService: AuthorService) {
   }
 
   ngOnInit() {
@@ -41,11 +43,27 @@ export class LoginComponent implements OnInit {
         StorageMessage.setToken(data.message);
         StorageMessage.setUserInfo(JSON.stringify(data.data));
         this.snackBarService.success('登录成功');
-        this.router.navigate(['/blog', data.data.nickName]);
+        if (this.authorService.redirectUrl) {
+          if (this.authorService.redirectUrl.indexOf('?') > -1) {
+            const splits = this.authorService.redirectUrl.split('?');
+            const prefix = splits[0];
+            const queryParams = {};
+            splits[1].split('&').forEach(item => {
+              queryParams[item.split('=')[0]] = item.split('=')[1];
+            });
+            this.router.navigate([prefix], {
+              queryParams
+            });
+          } else {
+            this.router.navigate([this.authorService.redirectUrl]);
+          }
+        } else {
+          this.router.navigate(['/blog']);
+        }
       } else {
         this.snackBarService.failure(data.message);
       }
-    })
+    });
   }
 
 
