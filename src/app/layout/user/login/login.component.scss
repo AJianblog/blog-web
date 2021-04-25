@@ -9,6 +9,8 @@ button {
   height: 100%;
   background-color: #eceef1;
   box-sizing: border-box;
+  display: flex;
+  align-content: center;
 }
 
 .m-bg {
@@ -67,7 +69,7 @@ button {
   display: flex;
   justify-content: center;
   width: 100%;
-  padding-top: 6%;
+  align-items: center;
 
   .form-box {
     position: relative;
@@ -78,11 +80,6 @@ button {
     -webkit-border-radius: .4rem;
     -moz-border-radius: .4rem;
     border-radius: .4rem;
-
-
-    mat-tab-group {
-      margin-top: 3rem;
-    }
 
     .login-form {
       width: 100%;
@@ -108,7 +105,6 @@ button {
         border-radius: 4px;
         -webkit-transition: all .3s cubic-bezier(.645, .045, .355, 1);
         -moz-transition: all .3s cubic-bezier(.645, .045, .355, 1);
-        -ms-transition: all .3s cubic-bezier(.645, .045, .355, 1);
         -o-transition: all .3s cubic-bezier(.645, .045, .355, 1);
         transition: all .3s cubic-bezier(.645, .045, .355, 1);
       }
