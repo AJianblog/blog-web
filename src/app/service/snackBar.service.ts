@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {MatSnackBar} from "@angular/material/snack-bar";
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +15,7 @@ export class SnackBarService {
    * @param duration 显示时长
    */
   success(message: string, duration: number = 2000) {
-    this.snackBar.open(message, "关闭", {duration})
+    this.snackBar.open(message, '关闭', {duration});
   }
 
   /**
@@ -24,6 +24,6 @@ export class SnackBarService {
    * @param duration 显示时长
    */
   failure(message: string, duration: number = 2000) {
-    this.snackBar.open(message, "关闭", {duration});
+    this.snackBar.open(message, '关闭', {duration});
   }
 }

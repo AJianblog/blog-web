@@ -1,18 +1,18 @@
 import {Component, OnInit} from '@angular/core';
-import {BlogService} from "../../../../@core/interface/blog.service";
-import {StorageMessage} from "../../../../utils/storage-message";
-import {Blog} from "../../../../model/blog";
-import {CodeEnum} from "../../../../entity/code-enum";
-import {PageResult} from "../../../../entity/page-result";
-import {MatDialog} from "@angular/material/dialog";
+import {BlogService} from '../../../../@core/interface/blog.service';
+import {StorageMessage} from '../../../../utils/storage-message';
+import {Blog} from '../../../../model/blog';
+import {CodeEnum} from '../../../../entity/code-enum';
+import {PageResult} from '../../../../entity/page-result';
+import {MatDialog} from '@angular/material/dialog';
 import {
   ConfirmDialogComponent,
   ConfirmDialogInputModule
-} from "../../../../@theme/component/confirm-dialog/confirm-dialog.component";
-import {SnackBarService} from "../../../../service/snackBar.service";
-import {PageEvent} from "@angular/material/paginator";
-import {ActivatedRoute, Params, Router} from "@angular/router";
-import {BlogAndTypeAndTagGroup} from "../../../../entity/group/BlogAndTypeAndTagGroup";
+} from '../../../../@theme/component/confirm-dialog/confirm-dialog.component';
+import {SnackBarService} from '../../../../service/snackBar.service';
+import {PageEvent} from '@angular/material/paginator';
+import { ActivatedRoute, ParamMap, Router } from '@angular/router';
+import {BlogAndTypeAndTagGroup} from '../../../../entity/group/BlogAndTypeAndTagGroup';
 
 @Component({
   selector: 'app-my-article',
@@ -24,12 +24,12 @@ export class MyArticleComponent implements OnInit {
   /**
    * 页数
    */
-  pageIndex: number = 1;
+  pageIndex = 1;
 
   /**
    * 页条数
    */
-  pageSize: number = 10;
+  pageSize = 10;
 
   /**
    * 分页结果
@@ -41,7 +41,7 @@ export class MyArticleComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.route.queryParamMap.subscribe((params: Params) => {
+    this.route.queryParamMap.subscribe((params: ParamMap) => {
       this.pageIndex = +params.get('pageIndex') || 1;
       this.pageSize = +params.get('pageSize') || 10;
       this.getMyBlogList();
@@ -56,7 +56,7 @@ export class MyArticleComponent implements OnInit {
       if (data.code === CodeEnum.SUCCESS) {
         this.pageResult = data.data;
       }
-    })
+    });
   }
 
   /**
@@ -76,10 +76,10 @@ export class MyArticleComponent implements OnInit {
             this.snackbarService.success(data.message);
             this.getMyBlogList();
           }
-        })
+        });
 
       }
-    })
+    });
   }
 
   /**
@@ -93,7 +93,7 @@ export class MyArticleComponent implements OnInit {
         pageSize: pageEvent.pageSize
       },
       relativeTo: this.route
-    })
+    });
   }
 
   get userId() {
